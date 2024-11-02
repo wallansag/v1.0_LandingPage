@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços para Idosos</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script>
+    function toggleResposta(id) {
+    var resposta = document.getElementById(id);
+    resposta.style.display = (resposta.style.display === "none" || resposta.style.display === "") ? "block" : "none";
+    }
+    </script>
 </head>
 <title>Senior Service</title>
 <body>
@@ -64,10 +70,22 @@
     <section class="faq">
         <h2>Perguntas Frequentes</h2>
         <ol>
-            <li>Quais são os servicos oferecidos?</li>
-            <li>Como funciona a avaliação dos prestadores de serviços?</li>
-            <li>Como faço para contratar um serviço?</li>
+            <li class="pergunta" onclick="toggleResposta('resposta1')">Quais são os serviços oferecidos?</li>
+            <div id="resposta1" class="resposta" style="display:none;">
+                <p> São oferecidos serviços voltados para a área da saúde e também de manutenção residência</p>
+            </div>
+
+            <li class="pergunta" onclick="toggleResposta('resposta2')">Como funciona a avaliação dos prestadores de serviços?</li>
+            <div id="resposta2" class="resposta" style="display:none;">
+                <p> Os nossos clientes realizam avaliações anônimas dos serviços prestados e estas avaliações ficam disponíveis para visualização por outros clientes, junto com a nota do serviço</p>
+            </div>
+            <li class="pergunta" onclick="toggleResposta('resposta3')">Como faço para contratar um serviço?</li>
+            <div id="resposta3" class="resposta" style="display:none;">
+            <p> Para a contração basta realizar o cadastro em nossa plataforma. Após você poderá visualizar os serviços disponíveis e ao acessá-lo deverá selecionar um prestador e realizar o agendamento da visita</p>
+            </div>
         </ol>
+        
+   
     </section>
 
     <footer>

@@ -109,3 +109,11 @@ footer {
     background-color: #007ACC;
     color: white;
 }
+.resposta {
+    display: none;
+    margin-left: 20px;
+}
+.pergunta{
+    cursor: pointer;
+    color: black;
+}
